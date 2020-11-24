@@ -1,7 +1,7 @@
 import React,{Fragment, useState}from 'react'
 import Error from './Error'
 
-function Pregunta({guardarPresupuesto, guardarRestante}) {
+function Pregunta({guardarPresupuesto, guardarRestante, actualizarPregunta}) {
 
     //definir el state
     const [cantidad,guardarCantidad]= useState(0);
@@ -26,6 +26,7 @@ function Pregunta({guardarPresupuesto, guardarRestante}) {
         guardarError(false)
         guardarPresupuesto(cantidad)
         guardarRestante(cantidad)
+        actualizarPregunta(false)
 
     }
 
